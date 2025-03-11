@@ -1,0 +1,11 @@
+.list-component {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#text {
+    width: 80%;
+    height: 100%;
+}
