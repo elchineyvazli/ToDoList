@@ -1,0 +1,48 @@
+/* ? TODONOTE.JSX */
+
+.todo-note {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border: solid 2px blueviolet;
+    border-radius: 4px;
+}
+
+.text {
+    width: 75%;
+    height: 100%;
+}
+
+.text-width {
+    width: 63%;
+}
+
+.buttons {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+.buttons-width {
+    width: 33%;
+}
+
+.event-button {
+    width: 50%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: royalblue;
+    color: white;
+}
+
+.event-button-edit {
+    width: 50%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: royalblue;
+    color: white;
+}
