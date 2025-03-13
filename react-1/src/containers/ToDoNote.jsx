@@ -6,9 +6,11 @@ import { CiCircleCheck } from "react-icons/ci";
 import '../css/List.css'
 import { useState } from "react";
 
-function ToDoNote({ noteInfos, removeToDo, list }) {
+function ToDoNote({ noteInfos, removeToDo, editToDo }) {
 
-    const { id, content } = noteInfos;
+    let { id, content } = noteInfos;
+    console.log("todonote", content);
+
     let [editBool, setEditBool] = useState(false);
     let [inputValue, setInputValue] = useState(content);
 
@@ -17,7 +19,7 @@ function ToDoNote({ noteInfos, removeToDo, list }) {
     }
 
     const editNoteById = () => {
-        setEditBool(!editBool)
+        setEditBool(!editBool);
     }
 
     return (
@@ -35,13 +37,13 @@ function ToDoNote({ noteInfos, removeToDo, list }) {
                         <>
                             <button className="event-button-edit ci-circle-check" style={{ backgroundColor: 'green' }} onClick={() => {
                                 setEditBool(false);
-                                
+                                editToDo(id, inputValue);
                             }}>
                                 <CiCircleCheck size={36} />
                             </button>
                             <button className="event-button-edit ci-circle-remove" style={{ backgroundColor: 'red' }} onClick={() => {
                                 setEditBool(false);
-                                setInputValue(content)
+                                setInputValue(content);
                             }}>
                                 <CiCircleRemove size={36} />
                             </button>
