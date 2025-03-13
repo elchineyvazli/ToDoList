@@ -1,18 +1,19 @@
 import React from 'react'
 import "../css/List.css"
-import { FaPencil } from "react-icons/fa6";
-import { FaTrash } from "react-icons/fa";
+import ToDoNote from './ToDoNote'
 
-function ListComponent() {
+
+function ListComponent({ list, removeToDo, editToDo, editValue }) {
     return (
-        <div className='list-component'>
-            <input type="text" id='text' disabled />
-            <button>
-                <FaPencil />
-            </button>
-            <button>
-                <FaTrash />
-            </button>
+        <div className="list-component">
+            {
+                list.length > 0 ? (
+                    list.map((el) => (
+                        <ToDoNote key={el.id} noteInfos={el} removeToDo={removeToDo} editToDo={editToDo} editValue={editValue} />
+                    ))
+                ) :
+                    <h3 style={{ textAlign: 'center', width: '100%' }}>There is not any draft</h3>
+            }
         </div>
     )
 }
